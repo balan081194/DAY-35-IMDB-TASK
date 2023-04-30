@@ -1,0 +1,53 @@
+IMDB Design a DB for IMDB 
+1. Movie should have multiple media(Video or Image) 
+2. Movie can belongs to multiple Genre 
+3. Movie can have multiple reviews and Review can belongs to a user 
+4. Artist can have multiple skills 
+5. Artist can perform multiple role in a single film
+
+
+
+-------------- CREATE DATABASE IMDB------------------
+
+USE IMDB;
+CREATE TABLE MOVIE;
+
+DESCRIBE MOVIE;
+INSERT INTO MOVIE VALUES
+(1,"VARISU","SENTIMENT"),
+(2,"THUNIVU","ROBBERY"),
+(3,"DASAVADARAM","SCI_FI"),
+(4,"AYAN","THRILLER"),
+(5,"PETTA","ACTION");
+
+-----------------------CREATE TABLE PERSON-----------------------------
+
+CREATE TABLE PERSON( 
+USER_ID INT PRIMARY KEY, 
+USER_NAME VARCHAR(30), 
+MOV_ID INT, USER_REVIEW VARCHAR(50) );
+
+INSERT INTO PERSON VALUES
+(1,"PERSON1",1,"ONE TIME SEEN"),
+(2,"PERSON2",2,"ACTION SCENE IS SUPER"),
+(3,"PERSON3",3,"HISTORIC MOVIE GOOD"),
+(4,"PERSON4",5,"BGM MUSIC AMAZING"),
+(5,"PERSON5",4,"ALL SONG GOOD");
+
+----------------------------CREATE ARTIST-----------------------------------------
+
+
+create table ARTIST(
+ID INT PRIMARY KEY,
+MOV_ID INT,
+ARTIST_NAME VARCHAR(50), 
+SKILLS VARCHAR(50),
+ROLE VARCHAR(50));
+
+
+INSERT INTO ARTIST VALUES
+(1,1,"VIJAY","DANCER,SINGER,ACTOR","HERO"),
+(2,2,"AJITH","RACER,ACTOR","HERO AND VILLAN"),
+(3,3,"KAMAL","DIRECTOR,ACTOR,DANCER","HERO,VILLAN"),
+(4,4,"SURIYA","ACTOR,DANCER,PRODUCER","HERO"),
+(5,5,"RAJINI","SUPERSTAR,ACTOR","HERO");
